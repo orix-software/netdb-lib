@@ -1,0 +1,3 @@
+[submodule "orix-sdk"]
+	path = orix-sdk
+	url = https://github.com/assinie/orix-sdk/
