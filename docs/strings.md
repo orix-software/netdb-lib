@@ -1,0 +1,1 @@
+const char str_oom[4] = "oom";

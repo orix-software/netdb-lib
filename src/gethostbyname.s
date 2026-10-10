@@ -37,7 +37,7 @@
     gethostby_name_packet_to_resolv := HRS3
 
     sta     RES
-    sty     RES+1
+    sty     RES + 1
 
     lda     #<query2
     sta     RESB
@@ -49,7 +49,7 @@
     sta     libzp    ; Save store packet
 
     lda     #$00
-    sta     libzp+1
+    sta     libzp + 1
 
     lda     #$00
     sta     DECFIN
@@ -84,7 +84,7 @@
     clc
     adc     RES
     bcc     @do_not_inc
-    inc     RES+1
+    inc     RES + 1
 
 @do_not_inc:
     sta     RES
@@ -93,7 +93,7 @@
     clc
     adc     RESB
     bcc     @do_not_inc_RESB
-    inc     RESB+1
+    inc     RESB + 1
 
 @do_not_inc_RESB:
     sta     RESB
@@ -226,8 +226,8 @@
     lda     libzp
     sta     RES
 
-    lda     libzp+1
-    sta     RES+1
+    lda     libzp + 1
+    sta     RES + 1
 
     ; Get socket
     ; Set ptr to send to RES parameter for socket_send
@@ -290,7 +290,7 @@
     lda     main_buffer_ptr
 
     sta     RES
-    lda     main_buffer_ptr+1
+    lda     main_buffer_ptr + 1
     sta     RES+1
 
     sty     save_x
