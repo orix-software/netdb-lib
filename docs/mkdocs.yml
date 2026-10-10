@@ -1,4 +1,4 @@
-site_name: FIXME DOCUMENTATION
+site_name: netdblib DOCUMENTATION
 
 markdown_extensions:
     - pymdownx.highlight
@@ -51,7 +51,15 @@ theme:
 
 nav:
     - Introduction: index.md
+    - Assembly Routines:
+        - getaddrinfo.md: getaddrinfo.md
+        - gethostbyname.md: gethostbyname.md
+        - netdberror.md: netdberror.md
+        - strings.md: strings.md
 
+    - C Functions:
+        - _getaddrinfo.md: _getaddrinfo.md
+        - _gethostbyname.md: _gethostbyname.md
       #extra_css:
       #    - stylesheets/extra.css
 
