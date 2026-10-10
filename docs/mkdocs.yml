@@ -34,8 +34,8 @@ plugins:
 
 dev_addr: '172.30.72.43:8001'
 
-docs_dir: code/
-site_dir: api/
+#docs_dir: docs/
+#site_dir: api/
 theme:
     name: material
     #logo: favicon.png
