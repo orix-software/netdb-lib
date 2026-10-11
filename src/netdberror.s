@@ -9,6 +9,7 @@
 
 ; Get error Code, and displays right error code
 .proc netdberror
+    ;@brief Display the error code for gethostbyname.
     cpx     #INVALID_SOCKET
     beq     @invalid_socket_error
 

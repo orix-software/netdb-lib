@@ -20,6 +20,7 @@
 
 
 .proc gethostbyname
+    ;;@brief Get host information by name.
     ; Input :
     ; - A and Y  : ptr of the name to resolve
     ; debug_gethostbyname = 1

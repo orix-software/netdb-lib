@@ -17,6 +17,7 @@
 .import socket
 
 .proc getaddrinfo
+    ;;@brief Get address information.
     ; Performs a malloc
     .out     .sprintf("|MODIFY:libnetdb:RES:dns_resolv_host")
     .out     .sprintf("|MODIFY:libnetdb:RESB:dns_resolv_host")
