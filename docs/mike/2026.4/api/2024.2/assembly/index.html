@@ -1,0 +1,1818 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../c/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
+    
+    
+      
+        <title>Assembly - CH395 LIB DOCUMENTATION</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9f615399.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.649f08f9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assembly" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CH395 LIB DOCUMENTATION" class="md-header__button md-logo" aria-label="CH395 LIB DOCUMENTATION" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CH395 LIB DOCUMENTATION
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assembly
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Versions
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CH395 LIB DOCUMENTATION" class="md-nav__button md-logo" aria-label="CH395 LIB DOCUMENTATION" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CH395 LIB DOCUMENTATION
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Versions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Versions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024.2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            2024.2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Assembly
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Assembly
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_check_exist" class="md-nav__link">
+    ch395_check_exist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_clear_recv_buf_sn" class="md-nav__link">
+    ch395_clear_recv_buf_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_close_socket_sn" class="md-nav__link">
+    ch395_close_socket_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_dhcp_enable" class="md-nav__link">
+    ch395_dhcp_enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_enter_sleep" class="md-nav__link">
+    ch395_enter_sleep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_cmd_status" class="md-nav__link">
+    ch395_get_cmd_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_dhcp_status" class="md-nav__link">
+    ch395_get_dhcp_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_glob_int_status_all" class="md-nav__link">
+    ch395_get_glob_int_status_all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_glob_int_status" class="md-nav__link">
+    ch395_get_glob_int_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_ic_ver" class="md-nav__link">
+    ch395_get_ic_ver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_int_status_sn" class="md-nav__link">
+    ch395_get_int_status_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_ip_inf" class="md-nav__link">
+    ch395_get_ip_inf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_mac_adress" class="md-nav__link">
+    ch395_get_mac_adress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_phy_status" class="md-nav__link">
+    ch395_get_phy_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_recv_len_sn" class="md-nav__link">
+    ch395_get_recv_len_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_remot_ipp_sn" class="md-nav__link">
+    ch395_get_remot_ipp_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_socket_status_sn" class="md-nav__link">
+    ch395_get_socket_status_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_unreach_ipport" class="md-nav__link">
+    ch395_get_unreach_ipport
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_init" class="md-nav__link">
+    ch395_init
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_open_socket_sn" class="md-nav__link">
+    ch395_open_socket_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_read_recv_buf_sn" class="md-nav__link">
+    ch395_read_recv_buf_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_reset_all" class="md-nav__link">
+    ch395_reset_all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_baudrate" class="md-nav__link">
+    ch395_set_baudrate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_des_port_sn" class="md-nav__link">
+    ch395_set_des_port_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_fun_para" class="md-nav__link">
+    ch395_set_fun_para
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_gwip_addr" class="md-nav__link">
+    ch395_set_gwip_addr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ip_addr" class="md-nav__link">
+    ch395_set_ip_addr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ip_addr_sn" class="md-nav__link">
+    ch395_set_ip_addr_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ipraw_pro_sn" class="md-nav__link">
+    ch395_set_ipraw_pro_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_mac_adress" class="md-nav__link">
+    ch395_set_mac_adress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_mac_filt" class="md-nav__link">
+    ch395_set_mac_filt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_mask_addr" class="md-nav__link">
+    ch395_set_mask_addr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_phy" class="md-nav__link">
+    ch395_set_phy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_proto_type_sn" class="md-nav__link">
+    ch395_set_proto_type_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_retran_count" class="md-nav__link">
+    ch395_set_retran_count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_retran_period" class="md-nav__link">
+    ch395_set_retran_period
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_sour_port_sn" class="md-nav__link">
+    ch395_set_sour_port_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ttl" class="md-nav__link">
+    ch395_set_ttl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_tcp_connect_sn" class="md-nav__link">
+    ch395_tcp_connect_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_tcp_disconnect_sn" class="md-nav__link">
+    ch395_tcp_disconnect_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_tcp_listen_sn" class="md-nav__link">
+    ch395_tcp_listen_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_write_send_buf_sn" class="md-nav__link">
+    ch395_write_send_buf_sn
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2024.1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            2024.1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024.1/assembly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2024.1/c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_check_exist" class="md-nav__link">
+    ch395_check_exist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_clear_recv_buf_sn" class="md-nav__link">
+    ch395_clear_recv_buf_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_close_socket_sn" class="md-nav__link">
+    ch395_close_socket_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_dhcp_enable" class="md-nav__link">
+    ch395_dhcp_enable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_enter_sleep" class="md-nav__link">
+    ch395_enter_sleep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_cmd_status" class="md-nav__link">
+    ch395_get_cmd_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_dhcp_status" class="md-nav__link">
+    ch395_get_dhcp_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_glob_int_status_all" class="md-nav__link">
+    ch395_get_glob_int_status_all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_glob_int_status" class="md-nav__link">
+    ch395_get_glob_int_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_ic_ver" class="md-nav__link">
+    ch395_get_ic_ver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_int_status_sn" class="md-nav__link">
+    ch395_get_int_status_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_ip_inf" class="md-nav__link">
+    ch395_get_ip_inf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_mac_adress" class="md-nav__link">
+    ch395_get_mac_adress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_phy_status" class="md-nav__link">
+    ch395_get_phy_status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_recv_len_sn" class="md-nav__link">
+    ch395_get_recv_len_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_remot_ipp_sn" class="md-nav__link">
+    ch395_get_remot_ipp_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_socket_status_sn" class="md-nav__link">
+    ch395_get_socket_status_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_get_unreach_ipport" class="md-nav__link">
+    ch395_get_unreach_ipport
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_init" class="md-nav__link">
+    ch395_init
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_open_socket_sn" class="md-nav__link">
+    ch395_open_socket_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_read_recv_buf_sn" class="md-nav__link">
+    ch395_read_recv_buf_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_reset_all" class="md-nav__link">
+    ch395_reset_all
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_baudrate" class="md-nav__link">
+    ch395_set_baudrate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_des_port_sn" class="md-nav__link">
+    ch395_set_des_port_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_fun_para" class="md-nav__link">
+    ch395_set_fun_para
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_gwip_addr" class="md-nav__link">
+    ch395_set_gwip_addr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ip_addr" class="md-nav__link">
+    ch395_set_ip_addr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ip_addr_sn" class="md-nav__link">
+    ch395_set_ip_addr_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ipraw_pro_sn" class="md-nav__link">
+    ch395_set_ipraw_pro_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_mac_adress" class="md-nav__link">
+    ch395_set_mac_adress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_mac_filt" class="md-nav__link">
+    ch395_set_mac_filt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_mask_addr" class="md-nav__link">
+    ch395_set_mask_addr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_phy" class="md-nav__link">
+    ch395_set_phy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_proto_type_sn" class="md-nav__link">
+    ch395_set_proto_type_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_retran_count" class="md-nav__link">
+    ch395_set_retran_count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_retran_period" class="md-nav__link">
+    ch395_set_retran_period
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_sour_port_sn" class="md-nav__link">
+    ch395_set_sour_port_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_set_ttl" class="md-nav__link">
+    ch395_set_ttl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_tcp_connect_sn" class="md-nav__link">
+    ch395_tcp_connect_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_tcp_disconnect_sn" class="md-nav__link">
+    ch395_tcp_disconnect_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_tcp_listen_sn" class="md-nav__link">
+    ch395_tcp_listen_sn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ch395_write_send_buf_sn" class="md-nav__link">
+    ch395_write_send_buf_sn
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="assembly">Assembly</h1>
+<hr>
+<h2 id="ch395_check_exist">ch395_check_exist</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to test the communication interface and working state to check whether CH395 is working properly. This command needs to input 1 byte of data, which can be any data. If CH395 is working properly, the output data of CH395 will be the bitwise reverse of the input data. For example, if the input data is 57H, the output data will be A8H.</p>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>Accumulator : Returns '#CH395_DETECTED' if it exists</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_check_exist</span>
+<span class="w"> </span><span class="k">cmp</span><span class="w"> </span><span class="p">#</span><span class="n">CH395_DETECTED</span>
+<span class="w"> </span><span class="k">beq</span><span class="w"> </span><span class="n">ch395_connected</span>
+<span class="w"> </span><span class="k">rts</span>
+<span class="nl">ch395_connected:</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_clear_recv_buf_sn">ch395_clear_recv_buf_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to clear the Socket receive buffer. It is necessary to input 1 byte of Socket index value. Upon receiving this command, CH395 will reset the receiving length of this Socket, and the receiving pointer will point to the buffer head.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>Y Register </li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="n">CH395_SOCKET1</span><span class="w"> </span><span class="c1">; Socket ID</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_clear_recv_buf_sn</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_close_socket_sn">ch395_close_socket_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to close Socket. It is necessary to input a 1 byte of Socket index value. After Socket is closed, the receive buffer and transmit buffer of Socket are emptied, but the configuration information is still reserved, and you just need to open the Socket again when using the Socket the next time. In TCP mode, CH395 will automatically disconnect TCP before turning off Socket.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : The id of the socket to close</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Y Register </li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="mh">$01</span><span class="w"> </span><span class="c1">; Socket ID</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_close_socket_sn</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_dhcp_enable">ch395_dhcp_enable</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to start or stop DHCP. It is necessary to input a 1-byte flag. If the flag is 1, it will indicate that DHCP is on; if the flag is 0, it will indicate that DHCP is off. CH395 must be initialized before DHCP is started. After DHCP is started, CH395 will broadcast DHCPDISCOVER message to the network to discover DHCP Server, request the address and other configuration parameters after finding DHCP Server, and then generate GINT_STAT_DHCP interrupt. MCU can send GET_DHCP_STATUS command to get DHCP status. If the status code is 0, it will indicate success, and MCU can send the command GET_IP_INF to get IP, MASK and other information. If the status code is 1, it will indicate error, which is generally caused by timeout, for example, no DHCP Server is found. DHCP is always in a working state after startup unless it receives a DHCP shutdown command from MCU. During this process, if DHCP Server reassigns a configuration to CH395 and the configuration is different from the original configuration, CH395 will still generate an interrupt. After timeout interrupt is generated, if DHCP Server is not found, CH395 will continue to send DHCPDISCOVER message at an interval of about 16 seconds. It takes about 20MS to execute this command. MCU can send GET_CMD_STATUS to query whether the execution has finished and the execution status</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : The mode to activate DHCP mode</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>X Register </li>
+</ul>
+<hr>
+<h2 id="ch395_enter_sleep">ch395_enter_sleep</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command enables CH395 chip in a low-power sleep suspended state. When MCU writes a new command to CH395 (no data input command, such as CMD_GET_IC_VER), it will exit the low-power state. For the parallel port and SPI interface communication modes, active SCS chip selection will also cause CH395 to exit the low-power state, so MCU shall immediately disable the SCS chip selection after sending the command CMD_ENTER_SLEEP. In sleep state, MAC and PHY of CH395 will be in power off mode and disconnect Ethernet. Typically, it takes several milliseconds for CH395 to exit the low-power state.</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_get_cmd_status">ch395_get_cmd_status</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get the command execution status. CH395 will output 1 byte of data, which is the command execution state. The command execution status is as follows:</p>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_cmd_status</span>
+<span class="w"> </span><span class="c1">; Check A for STATUS</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+</ul>
+<hr>
+<h2 id="ch395_get_dhcp_status">ch395_get_dhcp_status</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Get dhcp status</p>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_dhcp_status</span>
+<span class="w"> </span><span class="c1">; Check A for dhcp status</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+</ul>
+<hr>
+<h2 id="ch395_get_glob_int_status_all">ch395_get_glob_int_status_all</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get the global interrupt status. CH395 will output 2 bytes of global interrupt status after receiving this command. Global interrupt status is defined as follows:</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_get_glob_int_status">ch395_get_glob_int_status</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get the global interrupt status. CH395 will output 1 byte of global interrupt status after receiving this command. Global interrupt status is defined as follows:</p>
+<p>Bit Name Description</p>
+<p>7 GINT_STAT_SOCK3 Socket3 interrupt</p>
+<p>6 GINT_STAT_SOCK2 Socket2 interrupt</p>
+<p>5 GINT_STAT_SOCK1 Socket1 interrupt</p>
+<p>4 GINT_STAT_SOCK0 Socket0 interrupt</p>
+<p>3 GINT_STAT_DHCP DHCP interrupt</p>
+<p>2 GINT_STAT_PHY_CHANGE PHY status change interrupt</p>
+<p>1 GINT_STAT_IP_CONFLI IP conflict</p>
+<p>0 GINT_STAT_UNREACH Inaccessible interrupt</p>
+<p>① GINT_STAT_UNREACH: Inaccessible interrupt. When CH395 receives ICMP inaccessible interrupt</p>
+<p>message, it saves the IP address, port and protocol type of the inaccessible IP packet in the inaccessible</p>
+<p>information table, and then generates an interrupt. When the MCU receives the interrupt, it can send the</p>
+<p>command GET_UNREACH_IPPORT to get the inaccessible information.</p>
+<p>② GINT_STAT_IP_CONFLI: IP conflict interrupt. This interrupt is generated when CH395 detects that its</p>
+<p>IP address is the same as that of other network devices in the same network segment.</p>
+<p>③ GINT_STAT_PHY_CHANGE: PHY change interrupt. This interrupt is generated when PHY connection</p>
+<p>of CH395 changes, for example, PHY state changes from the connected state to the disconnected state or</p>
+<p>from the disconnected state to the connected state. MCU can send GET_PHY_STATUS command to get</p>
+<p>the current PHY connection status.</p>
+<p>④ GINT_STAT_DHCP: DHCP interrupt. If MCU enables DHCP function of CH395, CH395 will generate</p>
+<p>this interrupt. MCU can send the command CMD_GET_DHCP_STATUS to get the DHCP status. If the</p>
+<p>status is 0, it will indicate success; otherwise, it will indicate timeout failure.</p>
+<p>⑤ GINT_STAT_SOCK0 - GINT_STAT_SOCK3: Socket interrupt. When there is an interrupt event in</p>
+<p>Socket, CH395 will generate this interrupt. MCU needs to send GET_INT_STATUS_SN to get the</p>
+<p>interrupt status of Socket. Please refer to GET_INT_STATUS_SN.</p>
+<p>When this command is completed, CH395 will set INT# pin to high level and clear the global interrupt</p>
+<p>status</p>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>Accumulator : Status </li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_glob_int_status</span>
+<span class="w"> </span><span class="c1">; check accumulator to get interrupts states</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_get_ic_ver">ch395_get_ic_ver</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get the chip and firmware versions. 1 byte of data returned is the version number, the bit 7 is 0, the bit 6 is 1, and the bits 5-0 are the version number. If the returned value is 41H, remove bits 7 and 6, and the version number will be 01H. It is called chip version in this text</p>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>Accumulator : Version </li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_ic_ver</span>
+<span class="w"> </span><span class="c1">; Check A for version</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_get_int_status_sn">ch395_get_int_status_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get the interrupt status of Socket. It is necessary to input 1 byte of Socket index value. After receiving this command, CH395 will output 1 byte of Socket interrupt code. The interrupt code bits are defined as follows:</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>X Register </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>Accumulator : Status of selected socket</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="n">CH395_SOCKET1</span><span class="w"> </span><span class="c1">; Check socket 1</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_int_status_sn</span>
+<span class="w"> </span><span class="c1">; Check interrupt type</span>
+<span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="p">#</span><span class="n">CH395_SINT_STAT_SEND_OK</span>
+<span class="w"> </span><span class="k">cmp</span><span class="w"> </span><span class="p">#</span><span class="n">CH395_SINT_STAT_SEND_OK</span>
+<span class="w"> </span><span class="k">beq</span><span class="w"> </span><span class="n">@send_ok</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_get_ip_inf">ch395_get_ip_inf</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Get ip info</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : the ptr to modify</li>
+<li>X Register : the ptr to modify</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>X Register </li>
+<li>Y Register </li>
+<li>RESTmp value</li>
+</ul>
+<hr>
+<h2 id="ch395_get_mac_adress">ch395_get_mac_adress</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Get mac address</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : the ptr</li>
+<li>X Register : the ptr</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>X Register </li>
+<li>Y Register </li>
+<li>RESTmp value</li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>
+<p>Accumulator : the content of ptr modified</p>
+</li>
+<li>
+<p>X Register : the content of ptr modified</p>
+</li>
+</ul>
+<hr>
+<h2 id="ch395_get_phy_status">ch395_get_phy_status</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get PHY connection status. After receiving this command, CH395 will query the current PHY connection status and output 1-byte PHY connection status code: PHY is disconnected when the connection status code is 01H; PHY connection is 10M full duplex when the connection status code is 02H; PHY connection is 10M half duplex when the connection status code is 04H. PHY connection is 100M full duplex when the connection status code is 08H; PHY connection is 100M half duplex when the connection status code is 10H</p>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>Accumulator : The physical status</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_phy_status</span>
+<span class="w"> </span><span class="c1">; Check A physical status</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_get_recv_len_sn">ch395_get_recv_len_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Get the length received from socket</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="mh">$01</span><span class="w"> </span><span class="c1">; Socket 1</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_recv_len_sn</span>
+<span class="w"> </span><span class="c1">; check A and X for length received</span>
+<span class="nl">ch395_connected:</span>
+</code></pre></div>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>X Register </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>
+<p>Accumulator : The length</p>
+</li>
+<li>
+<p>X Register : The length</p>
+</li>
+</ul>
+<hr>
+<h2 id="ch395_get_remot_ipp_sn">ch395_get_remot_ipp_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get the remote IP address and port number. It is necessary to input 1 byte of Socket index value. CH395 will output 4 bytes of IP address and 2 bytes of port number (low bytes in front). After Socket works in TCP Server mode and the connection is established, MCU can get the remote IP address and port number through this command</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : The Socket for the ip to get</li>
+<li>X Register : The ptr (high) to store the ip</li>
+<li>Y Register : The ptr (low) to store the ip</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>X Register </li>
+<li>Y Register </li>
+<li>RES</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="mh">$01</span><span class="w"> </span><span class="c1">; Socket 1</span>
+<span class="w"> </span><span class="k">ldx</span><span class="w"> </span><span class="p">#</span><span class="o">&lt;</span><span class="n">ip_dest</span>
+<span class="w"> </span><span class="k">ldy</span><span class="w"> </span><span class="p">#</span><span class="o">&gt;</span><span class="n">ip_dest</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_remot_ipp_sn</span>
+<span class="w"> </span><span class="k">rts</span>
+<span class="nl">ipdest:</span>
+<span class="w"> </span><span class="kp">.byte</span><span class="w"> </span><span class="mi">192</span><span class="p">,</span><span class="mi">168</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_get_socket_status_sn">ch395_get_socket_status_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get Socket status. It is necessary to input a 1 byte of Socket index value. CH395 will output a 2-byte status code when receiving this command. The first status code is the status code of Socket. The status code of Socket is defined as follows:</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>X Register </li>
+<li>Accumulator </li>
+</ul>
+<p><strong><em>Returns</em></strong></p>
+<ul>
+<li>
+<p>Accumulator : The status</p>
+</li>
+<li>
+<p>X Register : The state</p>
+</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="mh">$01</span><span class="w"> </span><span class="c1">; Socket 1</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_get_socket_status_sn</span>
+<span class="w"> </span><span class="c1">; check A and X for the state</span>
+<span class="w"> </span><span class="k">cmp</span><span class="w"> </span><span class="p">#</span><span class="n">CH395_SOCKET_CLOSED</span>
+<span class="w"> </span><span class="k">beq</span><span class="w"> </span><span class="n">@soclet</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">closed</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_get_unreach_ipport">ch395_get_unreach_ipport</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to get an inaccessible IP, ports and protocol type. CH395 will generate an inaccessible interrupt when an inaccessible message is received. MCU can use this command to get inaccessible information. After receiving this command, CH395 will output 1 byte of inaccessible code, 1 byte of protocol type, 2 bytes of port number (low bytes in front), and 4 bytes of IP in turn. MCU can judge whether the protocol, port or IP is inaccessible according to the inaccessible codes. For inaccessible codes, refer to RFC792 (CH395INC.H defines four common inaccessible codes).</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_init">ch395_init</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to initialize CH395, including initializing MAC, PHY and TCP/IP stack of CH395. Generally, it takes 350mS to execute the command. MCU can send GET_CMD_STATUS to query whether the execution has finished and the execution status.</p>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator 
+<strong><em>Description</em></strong></li>
+</ul>
+<p>Reset ch395</p>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_init</span>
+<span class="w"> </span><span class="c1">; Wait a bit</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_open_socket_sn">ch395_open_socket_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to open Socket and use the necessary steps of Socket. It is necessary to input 1 byte of Socket index value. After sending this command, MCU shall send GET_CMD_STATUS to query the command execution status. After opening Socket in UDP, IPRAW or MACRAW mode and returning successfully, data transmission can be performed. Before this command is sent, necessary settings must be made for destination IP, protocol type, source port, destination port, etc. Please refer to 8.3 Application Reference Steps for detailed steps.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Y Register </li>
+</ul>
+<hr>
+<h2 id="ch395_read_recv_buf_sn">ch395_read_recv_buf_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Get buffer from socket</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+<li>Y Register : Low ptr to fill</li>
+<li>X Register : X ptr to fill</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>REStmp value</li>
+<li>RESBtmp value</li>
+</ul>
+<hr>
+<h2 id="ch395_reset_all">ch395_reset_all</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command enables CH395 to perform a hardware reset. Typically, hardware reset is completed within 50mS.</p>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_reset_all</span>
+<span class="w"> </span><span class="c1">; Wait a bit</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_set_baudrate">ch395_set_baudrate</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the baud rate of CH395 for serial communication. When CH395 works in serial communication mode, the default communication baud rate is set by the level combination of SDO, SDI and SCK pins (refer to Section 6.4 of this datasheet) after reset. When these pins are suspended, the baud rate is 9600bps by default. If MCU supports high communication speed, the serial communication baud rate can be dynamically regulated through this command. This command requires the input of three data, namely, baudrate coefficient 0, baud rate coefficient 1 and baud rate coefficient 2. The following table shows the corresponding relationship with baud rates.</p>
+<hr>
+<h2 id="ch395_set_des_port_sn">ch395_set_des_port_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the Socket destination port. It is necessary to input 1 byte of Socket index value and 2 bytes of destination port (the low bytes are in front). When Socket works in UDP or TCP Client mode, this value must be set.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socketid </li>
+<li>Y Register : Low int</li>
+<li>X Register : high int</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>REStmp</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="mh">$01</span>
+<span class="w"> </span><span class="k">ldx</span><span class="w"> </span><span class="p">#</span><span class="mi">80</span>
+<span class="w"> </span><span class="k">ldx</span><span class="w"> </span><span class="p">#</span><span class="mh">$00</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_set_des_port_sn</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_set_fun_para">ch395_set_fun_para</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Set fun para</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Value </li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Y Register </li>
+<li>Accumulator </li>
+</ul>
+<hr>
+<h2 id="ch395_set_gwip_addr">ch395_set_gwip_addr</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the gateway address for CH395. It is necessary to input 4 bytes of IP address</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_set_ip_addr">ch395_set_ip_addr</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set IP address for CH395. It is necessary to input 4 bytes of IP address, with low bytes of IP in front. For all commands including IP input or output in this datasheet, IP low bytes are in front. This will not be explained below</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_set_ip_addr_sn">ch395_set_ip_addr_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the destination IP address of Socket. It is necessary to input 1 byte of Socket index value and 4 bytes of destination IP address. When Socket works in IPRAW, UDP, or TCP Client mode, 0the destination IP must be set before the command CMD_OPEN_SOCKET_SN is sent</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+<li>Y Register : low ptr ip</li>
+<li>X Register : high ptr ip</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<hr>
+<h2 id="ch395_set_ipraw_pro_sn">ch395_set_ipraw_pro_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>Set ipraw protocol on socket</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+<li>X Register : the mode proto</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Y Register </li>
+</ul>
+<hr>
+<h2 id="ch395_set_mac_adress">ch395_set_mac_adress</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set MAC address for CH395. It is necessary to input 6 bytes of MAC, with low bytes of MAC address in front. CH395 chip will store MAC address in the internal EEPROM. It will take 100mS to execute this command.MAC address assigned by IEEE has been burned when CH395 chip is delivered. If it is not necessary, please do not set MAC address</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Low ptr mac adress</li>
+<li>X Register : High ptr mac adress</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Accumulator </li>
+<li>Y Register </li>
+<li>RESTmp</li>
+</ul>
+<hr>
+<h2 id="ch395_set_mac_filt">ch395_set_mac_filt</h2>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_set_mask_addr">ch395_set_mask_addr</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the subnet mask for CH395. It is necessary to input 4 bytes of mask for this command. It is 255.255.255.0 by default and may not be set</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_set_phy">ch395_set_phy</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set Ethernet PHY connection mode of CH395. The connection mode is automated negotiation mode by default. This command needs to input 1 byte of data, which is the connection mode code: Disconnect PHY when the connection mode code is 01H; PHY is 10M full duplex when the connection mode code is 02H; PHY is 10M half duplex when the connection mode code is 04H; PHY is 100M full duplex when the connection mode code is 08H; PHY is 100M half duplex when the connection mode code is 10H; PHY is automated negotiation when the connection mode code is 20H. When CH395 receives this command, it will reset MAC and PHY and reconnect according to the newly set connection mode. If Ethernet is already connected, it will be disconnected and reconnected.</p>
+<div class="admonition failure">
+<p class="admonition-title">Does not work</p>
+</div>
+<hr>
+<h2 id="ch395_set_proto_type_sn">ch395_set_proto_type_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the working mode of Socket. It is necessary to input 1 byte of Socket index value and 1 byte of working mode. The working mode is defined as follows:</p>
+<p>Code Name Description</p>
+<p>03H PROTO_TYPE_TCP TCP mode</p>
+<p>02H PROTO_TYPE_UDP UDP mode</p>
+<p>01H PROTO_TYPE_MAC_RAW MAC original message mode</p>
+<p>00H PROTO_TYPE_IP_RAW IP original message mode</p>
+<p>This command must be executed before CMD_OPEN_SOCKET_SN. Refer to 8.3 Application Reference</p>
+<p>Steps for detailed steps.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<hr>
+<h2 id="ch395_set_retran_count">ch395_set_retran_count</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the number of retries. It is necessary to input 1 byte of number of retries. The allowable maximum value is 20. If the input data is more than 20, it will be processed as 20. The default number of retries is 12, and retries are only valid in TCP mode.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Retran period</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>X Register </li>
+</ul>
+<hr>
+<h2 id="ch395_set_retran_period">ch395_set_retran_period</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the retry cycle. It is necessary to input 2 bytes of number of cycles of (with low bytes in front) in milliseconds. The allowable maximum value is 1000. The total retry time is N * M, N is the number of retries, and M is the retry cycle. The default retry cycle is 500MS and retries are only valid in TCP mode.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Period </li>
+<li>X Register : Period </li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Y Register </li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">lda</span><span class="w"> </span><span class="p">#</span><span class="mh">$FF</span>
+<span class="w"> </span><span class="k">ldx</span><span class="w"> </span><span class="p">#</span><span class="mh">$FF</span>
+<span class="w"> </span><span class="k">jsr</span><span class="w"> </span><span class="n">ch395_retran_period</span>
+<span class="w"> </span><span class="k">rts</span>
+</code></pre></div>
+<hr>
+<h2 id="ch395_set_sour_port_sn">ch395_set_sour_port_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set the source port of Socket. It is necessary to input 1 byte of Socket index value and 2 bytes of source port (low bytes in front). If two or more Sockets are in the same mode, the source port numbers must not be the same. For example, Socket 0 is in UDP mode, the source port number is 600, and Socket 1 is also in UDP mode. The source port number 600 cannot be used again, otherwise it may cause the0 opening failure.</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+<li>Y Register : Low ptr address</li>
+<li>X Register : High ptr address</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>RES</li>
+</ul>
+<hr>
+<h2 id="ch395_set_ttl">ch395_set_ttl</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to set Socket TTL. It is necessary to input 1 byte of Socket index value and 1 byte of TTL value. It shall be set after the Socket is opened, and the maximum value is 128</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket ID</li>
+<li>X Register : TTL value</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>Y Register </li>
+</ul>
+<hr>
+<h2 id="ch395_tcp_connect_sn">ch395_tcp_connect_sn</h2>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<hr>
+<h2 id="ch395_tcp_disconnect_sn">ch395_tcp_disconnect_sn</h2>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket id</li>
+</ul>
+<hr>
+<h2 id="ch395_tcp_listen_sn">ch395_tcp_listen_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is only valid in TCP mode, enabling the Socket to be in the monitoring mode, namely, TCP Server mode. It is necessary to input a 1 byte of Socket index value. This command must be executed after OPEN_SOCKET_SN. After sending this command, MCU shall send GET_CMD_STATUS to query the 0command execution status. In TCP Server mode, the Socket will always detect connection events, and the interrupt SINT_STAT_CONNECT will be generated until the connection is successful. Only one connection can be 0established for each Socket. If an eligible connection event is received again, Socket will send TCP RESET to the remote end tried to be connected.</p>
+<hr>
+<h2 id="ch395_write_send_buf_sn">ch395_write_send_buf_sn</h2>
+<p><strong><em>Description</em></strong></p>
+<p>This command is used to write data to Socket transmit buffer. It is necessary to input 1 byte of Socket index value, 2 bytes of length (low bytes in front) and several bytes of data stream. The length of input data must not be larger than the size of transmit buffer. However, in MACRAW mode, the maximum length of input data can only be 1514, and any redundant data will be discarded. After the external MCU writes the data, CH395 will encapsulate the data packet according to the working mode of Socket, and then send it. Before MCU receives SINT_STAT_SENBUF_FREE, it is not allowed to write data into Socket transmit buffer again</p>
+<p><strong><em>Input</em></strong></p>
+<ul>
+<li>Accumulator : Socket ID</li>
+<li>Y Register : Low length</li>
+<li>X Register : High length</li>
+<li>RESB : Adress ptr to read</li>
+</ul>
+<p><strong><em>Modify</em></strong></p>
+<ul>
+<li>RESTmp</li>
+</ul>
+<p><strong><em>Example</em></strong></p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2024-03-20
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      
+    
+  </body>
+</html>
