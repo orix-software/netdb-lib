@@ -22,14 +22,14 @@ markdown_extensions:
             format: !!python/name:pymdownx.superfences.fence_code_format
     - tables
     - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
- - git-revision-date
- - search
- - markmap
- - mkdocs-video
+    - git-revision-date
+    - search
+    - markmap
+    - mkdocs-video
 
 
 dev_addr: '172.30.72.43:8001'
@@ -68,3 +68,5 @@ extra:
     provider: mike
     alias:
       dev: "2026.4"
+
+
